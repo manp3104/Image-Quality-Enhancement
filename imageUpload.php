@@ -20,7 +20,7 @@
 
 	if($success) {
 
-		$result = shell_exec('python script.py ' . $img_address);
+		$result = shell_exec('sudo python script.py ' . $img_address);
 
 		$_SESSION["image_path"] = $img_address;
 		$_SESSION["image_path_orig"] = $img_address_orig;
