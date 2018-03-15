@@ -3,7 +3,7 @@
 	session_start();
 	$error = '';
 
-	$img_name = rand(1, 100);
+	$img_name = rand(1, 1000);
 	$img_address_orig = "image/".$img_name."icon_orig.jpg";
 	$img_address = "image/".$img_name."icon.jpg";
 
@@ -20,7 +20,7 @@
 
 	if($success) {
 
-		$result = shell_exec('python image/script.py ' . $img_address);
+		$result = shell_exec('python script.py ' . $img_address);
 
 		$_SESSION["image_path"] = $img_address;
 		$_SESSION["image_path_orig"] = $img_address_orig;
