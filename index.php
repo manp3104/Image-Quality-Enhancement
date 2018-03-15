@@ -106,8 +106,9 @@
     }
   
     .supernova .form-all, .form-all {
-      background-color: ;
+      background-color: #021116;
       border: 1px solid transparent;
+      opacity: 0.6;
     }
   
     .form-all {
@@ -137,22 +138,21 @@
     .supernova body {
       background: transparent;
     }
+    .form-submit-button-simple_carolina_blue {
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#63b9ee), color-stop(100%,#020507));
+    }
   
-    .form-textbox,
-    .form-textarea,
-    .form-radio-other-input,
-    .form-checkbox-other-input,
     .form-captcha input,
     .form-spinner input {
       background-color:#FFC;
     }
   
     .supernova {
-      background-image: none;
+      background-image:  url('back_img2.jpg');
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
     }
-    #stage {
-      background-image: none;
-    }
+ 
   
     .form-all {
       background-image: none;
@@ -207,7 +207,7 @@
       <li class="form-line" data-type="control_button" id="id_2">
         <div id="cid_2" class="form-input-wide">
           <div style="text-align:center;" class="form-buttons-wrapper">
-            <button id="input_2" type="submit" class="form-submit-button form-submit-button-simple_carolina_blue" data-component="button" style="padding: 2px 2px;">
+            <button id="input_2" type="submit" class="form-submit-button form-submit-button-simple_carolina_blue" data-component="button" style="padding: 2px 2px; border-radius: 0;">
               Upload Image
             </button>
           </div>

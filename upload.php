@@ -27,7 +27,9 @@
     body, html{
         margin:0;
         padding:0;
-        background:false;
+        background-image:  url('back_img2.jpg');
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
     }
 
     .form-all{
@@ -104,8 +106,9 @@
     }
   
     .supernova .form-all, .form-all {
-      background-color: ;
+      background-color: #021116;
       border: 1px solid transparent;
+      opacity: 0.6;
     }
   
     .form-all {
@@ -132,8 +135,8 @@
     .supernova {
       background-color:#09F;
     }
-    .supernova body {
-      background: transparent;
+    .form-submit-button-simple_carolina_blue {
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#63b9ee), color-stop(100%,#0f2a31));
     }
   
     .form-textbox,
@@ -146,7 +149,9 @@
     }
   
     .supernova {
-      background-image: none;
+      background-image:  url('back_img2.jpg');
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
     }
     #stage {
       background-image: none;
@@ -166,9 +171,10 @@
 
 <body>
 <form class="jotform-form" action="imageUpload.php" method="post" enctype="multipart/form-data" accept-charset="utf-8">
-
- <img src="<?php echo $_SESSION['image_path']; ?>" style="width: 700px; height: 500px; margin-left: 27%; margin-top: 2%; margin-bottom: 1%;">
-
+<div style="display: inline-flex;">
+<img src="<?php echo $_SESSION['image_path_orig']; ?>" style="width: 45%; height: 0%; margin-left: 5%; margin-top: 2%; margin-bottom: 1%;">
+ <img src="<?php echo $_SESSION['image_path']; ?>" style="width: 45%; height: 0%; margin-left: 0%; margin-top: 2%; margin-bottom: 1%;">
+</div>
   <div class="form-all">
     <ul class="form-section page-section">
       <li id="cid_1" class="form-input-wide" data-type="control_head">
@@ -197,7 +203,7 @@
         </label>
         <div id="cid_6" class="form-input-wide jf-required">
           <span class="form-sub-label-container" style="vertical-align:top;">
-            <input type="file" id="input_6" name="icon_img" data-imagevalidate="yes" data-file-accept="bmp, jpg, jpeg, png, gif" data-file-maxsize="100000" data-file-minsize="50" data-file-limit="0" data-component="fileupload" required />
+            <input type="file" id="input_6" name="icon_img" data-imagevalidate="yes" data-file-accept="bmp, jpg, jpeg, png, gif" data-file-maxsize="8000" data-file-minsize="50" data-file-limit="0" data-component="fileupload" required />
             <label class="form-sub-label" for="input_6" style="min-height:13px;">  </label>
           </span>
         </div>
@@ -207,10 +213,10 @@
       <li class="form-line" data-type="control_button" id="id_2">
         <div id="cid_2" class="form-input-wide">
           <div style="text-align:center;" class="form-buttons-wrapper">
-            <button id="input_2" type="submit" class="form-submit-button form-submit-button-simple_carolina_blue" data-component="button" style="margin-right: 7%; padding: 2px 2px;">
+            <button id="input_2" type="submit" class="form-submit-button form-submit-button-simple_carolina_blue" data-component="button" style="margin-right: 7%; padding: 2px 2px; border-radius: 0;">
               Upload Image
             </button>
-            <button id="input_2" type="submit" class="form-submit-button form-submit-button-simple_carolina_blue" data-component="button" style="padding: 2px 2px;">
+            <button id="input_2" type="submit" class="form-submit-button form-submit-button-simple_carolina_blue" data-component="button" style="padding: 2px 2px; border-radius: 0;">
              <a href="<?php echo $_SESSION['image_path']; ?>" download="enhanced_image.jpg" style="text-decoration: none;">Download Image</a>
            </button>
           </div>
