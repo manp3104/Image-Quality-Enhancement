@@ -172,8 +172,17 @@
 <body>
 <form class="jotform-form" action="imageUpload.php" method="post" enctype="multipart/form-data" accept-charset="utf-8">
 <div style="display: inline-flex;">
-<img src="<?php echo $_SESSION['image_path_orig']; ?>" style="width: 45%; height: 0%; margin-left: 5%; margin-top: 2%; margin-bottom: 1%;">
- <img src="<?php echo $_SESSION['image_path']; ?>" style="width: 45%; height: 0%; margin-left: 0%; margin-top: 2%; margin-bottom: 1%;">
+
+  <?php
+    $image = file_get_contents($_SESSION['image_path_orig']);
+    $image_codes = base64_encode($image);
+  ?>
+<img src="data:image/jpg;charset=utf-8;base64,<?php echo $image_codes; ?>" style="width: 45%; height: 0%; margin-left: 5%; margin-top: 2%; margin-bottom: 1%;">
+<?php
+    $image1 = file_get_contents($_SESSION['image_path']);
+    $image_codes1 = base64_encode($image1);
+  ?>
+ <img src="data:image/jpg;charset=utf-8;base64,<?php echo $image_codes1; ?>" style="width: 45%; height: 0%; margin-left: 0%; margin-top: 2%; margin-bottom: 1%;">
 </div>
   <div class="form-all">
     <ul class="form-section page-section">
